@@ -27,9 +27,9 @@ function html() {
 
 function styles() {
     return src(paths.scss.src)
-        .pipe(sass().on("error", sass.logError))
+        .pipe(sass().on("error", sass.logError)) // не падай ти нам ще треба :)
         .pipe(cssnano())
-        .pipe(rename({ suffix: ".min" }))
+        .pipe(rename({ suffix: ".min" })) // style.min.css
         .pipe(dest(paths.scss.dest))
         .pipe(browserSync.stream());
 }

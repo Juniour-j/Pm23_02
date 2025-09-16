@@ -1,15 +1,47 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="uk">
+<!--test comments -->
 <head>
-    <meta charset="UTF-8">
-    <title>I am tired,its first day</title>
-    <link rel="stylesheet" href="css/style.min.css">
+    <meta charset="utf-8" />
+    <title>Heloo world!</title>
+    <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body>
-<h1>Heloo world!</h1>
-<p>i already hate it 🙂</p>
-<img src="./img/test.jpg" alt="котик">
 
-<script src="js/script.min.js"></script>
+
+<main class="container"> <!--look in scss-->
+    <section class="hero">
+        <h1>Heloo world!</h1>
+        <p class="lead">I was here 😊</p>  <!--pruglusheno-->
+    </section>
+
+    <section class="card">
+        <img class="card__img" src="./img/test.jpg" alt="котик">
+        <div class="card__body">
+            <h2 class="card__title">Котик дня(за версією одного очевидця)</h2>
+            <p class="card__text">
+                Доброго ранку/дня/вечора/ночі всім хто це встигне прочитати
+            </p>
+        </div>
+    </section>
+    <section class="card">
+        <img class="card__img" src="./img/dog.jpg" alt="собачка">
+        <div class="card__body">
+            <h3 class="card__title">Собака дня(за версією одного(і того самого) очевидця)</h3>
+            <p class="card__text">
+                надіюсь ви це не будете читати :)
+            </p>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <small>pm_23_02 incorporation (why do you read this?)</small>
+    </div>
+</footer>
+
+<script src="./js/bundle.min.js"></script>
 </body>
 </html>

@@ -1,14 +1,88 @@
+// тестував як писати коментар
+$bg:        #f5f7fb;
+$text:      #1f2937;
+$muted:     #6b7280;
+$primary:   #2563eb;
+$card-bg:   #ffffff;
+$radius:    16px;
+$shadow:    0 8px 24px rgba(0,0,0,.08);
 
-$font-color: red;
-$bg: #eee;
+* { box-sizing: border-box; }
+html, body { height: 100%; }
 
 body {
+  margin: 0;
   background: $bg;
-  font-family: Comic Sans MS, sans-serif;
-  color: $font-color;
+  color: $text;
+  font: 16px/1.5 system-ui, "Segoe UI", Arial, sans-serif;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.hero {
+  padding: 24px 0 8px;
 
   h1 {
-    color: black;
-    text-decoration: underline;
+    margin: 0 0 8px;
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.1;
+    letter-spacing: .2px;
+    text-decoration: underline 3px rgba($primary, .35);
+    text-underline-offset: 6px;
+  }
+
+  .lead {
+    margin: 0;
+    color: $muted;
+    font-size: 18px;
+  }
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 20px;
+  background: $card-bg;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  padding: 20px;
+  align-items: start;
+}
+
+.card__img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: $radius - 6px;
+  user-select: none;
+}
+
+.card__body { padding-top: 4px; }
+
+.card__title {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+
+.card__text {
+  margin: 0;
+  color: $muted;
+}
+
+.site-footer {
+  margin-top: 240px;
+  border-top: 1px solid rgba(0,0,0,.06);
+  background: #fff;
+  color: $muted;
+
+  .container {
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 }
