@@ -1,0 +1,14 @@
+
+$font-color: red;
+$bg: #eee;
+
+body {
+  background: $bg;
+  font-family: Comic Sans MS, sans-serif;
+  color: $font-color;
+
+  h1 {
+    color: black;
+    text-decoration: underline;
+  }
+}
