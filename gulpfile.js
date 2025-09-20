@@ -26,11 +26,11 @@ function html() {
 
 
 function styles() {
-    return src(paths.scss.src)
-        .pipe(sass().on("error", sass.logError)) // не падай ти нам ще треба :)
+    return src("app/scss/style.scss")
+        .pipe(sass().on("error", sass.logError))
         .pipe(cssnano())
-        .pipe(rename({ suffix: ".min" })) // style.min.css
-        .pipe(dest(paths.scss.dest))
+        .pipe(rename({ basename: "style", suffix: ".min" }))
+        .pipe(dest("dist/css"))
         .pipe(browserSync.stream());
 }
 
