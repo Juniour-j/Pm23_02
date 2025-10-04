@@ -1,185 +1,266 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="uk">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Henry L. Williams - Resume</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Resume — Henry L. Williams</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.min.css">
+    <!-- Bootstrap з dist (копіює gulp-таск) -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- Наш зібраний стиль -->
+    <link rel="stylesheet" href="./css/style.min.css" />
 </head>
-<body>
-<div class="resume">
-    <!-- Верхня смуга/хедер -->
-    <header class="top">
-        <div class="left-block">
-            <div class="profile-card">
-                <img src="profile-photo.jpg" alt="Henry L. Williams" class="avatar"/>
-                <div class="title">
-                    <h1>HENRY L.<br><span>WILLIAMS</span></h1>
-                    <h2>Graphic &amp; Web Designer</h2>
-                    <p>
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </p>
+<body class="bg-page">
+
+<!-- «Аркуш» резюме на сірому фоні -->
+<div class="resume shadow-lg">
+
+    <div class="container-xxl px-4 py-4">
+
+        <!-- ШАПКА -->
+        <div class="row gx-5 align-items-start mb-4">
+            <div class="col-lg-8">
+                <div class="row g-3 align-items-start">
+                    <div class="col-auto">
+                        <img src="./img/test.jpg" class="photo" alt="Фото" />
+                    </div>
+                    <div class="col">
+                        <h1 class="person-name mb-1">
+                            <span class="person-name__bold">HENRY L.</span>
+                            <span class="person-name__light">WILLIAMS</span>
+                        </h1>
+                        <div class="role">Graphic &amp; Web Designer</div>
+                        <p class="intro mt-3 mb-0">
+                            Lorem Ipsum has been the industry's standard dummy text ever
+                            since the 1500s, when an unknown printer took a galley of type
+                            and scrambled it to make a type specimen book.
+                        </p>
+                    </div>
                 </div>
+            </div>
+
+            <div class="card-dark col-lg-4 mt-4 mt-lg-0">
+                <section class="card-tab card-tab--right">
+                    <h2 class="card-dark__title">CONTACT</h2>
+                    <ul class="contact list-unstyled mb-0">
+                        <li><span class="ci ci-phone"></span> +1-718-310-5588</li>
+                        <li><span class="ci ci-phone"></span> +1-313-981-8867</li>
+                        <li><span class="ci ci-www"></span> www.yourwebsite.com</li>
+                        <li><span class="ci ci-mail"></span> yourinfo@email.com</li>
+                        <li><span class="ci ci-pin"></span> 769 Prudence Street, Lincoln Park, MI 48146</li>
+                    </ul>
+                </section>
             </div>
         </div>
 
-        <aside class="right-rail">
-            <section class="panel contact">
-                <h3>CONTACT</h3>
-                <ul>
-                    <li><span class="i i-phone"></span> +1-718-310-5588</li>
-                    <li><span class="i i-mobile"></span> +1-313-381-8167</li>
-                    <li><span class="i i-web"></span> www.yourwebsite.com</li>
-                    <li><span class="i i-mail"></span> yourinfo@gmail.com</li>
-                    <li><span class="i i-pin"></span> 766 Prudene Street, Lincoln Park, MI 48146</li>
-                </ul>
-            </section>
-        </aside>
-    </header>
+        <!-- БЛОКИ ЗЛІВА: SKILLS + HOBBIES -->
+        <div class="row gx-4 mb-4"> <!-- Відступ між рядками -->
+            <div class="card-dark col-lg-8"> <!-- Ліворуч: SKILLS + HOBBIES -->
+                <div class="row g-4"> <!-- Вкладений рядок для двох колонок SKILLS + HOBBIES -->
+                    <div class="col-md-6"> <!-- Ліворуч: SKILLS -->
+                        <section >
+                            <div class="card-dark__head">
+                                <span class="hex"></span>
+                                <h3 class="card-dark__title">SKILLS</h3>
+                            </div>
 
-    <!-- Темна смуга з 3 секціями -->
-    <section class="band">
-        <div class="col">
-            <h3><span class="dot"></span> Skills</h3>
-            <ul class="meter-list">
-                <li><span>Adobe Photoshop</span><div class="meter"><i style="width:90%"></i></div></li>
-                <li><span>Adobe Illustrator</span><div class="meter"><i style="width:85%"></i></div></li>
-                <li><span>Microsoft Word</span><div class="meter"><i style="width:70%"></i></div></li>
-                <li><span>Microsoft PowerPoint</span><div class="meter"><i style="width:80%"></i></div></li>
-                <li><span>HTML5/CSS3</span><div class="meter"><i style="width:95%"></i></div></li>
-            </ul>
-        </div>
+                            <ul class="meter-list">
+                                <li class="meter-item">
+                                    <span class="meter-item__label">Adobe Photoshop</span>
+                                    <span class="meter" style="--val: 78%;"></span>
+                                </li>
+                                <li class="meter-item">
+                                    <span class="meter-item__label">Adobe Illustrator</span>
+                                    <span class="meter" style="--val: 70%;"></span>
+                                </li>
+                                <li class="meter-item">
+                                    <span class="meter-item__label">Microsoft Word</span>
+                                    <span class="meter" style="--val: 60%;"></span>
+                                </li>
+                                <li class="meter-item">
+                                    <span class="meter-item__label">PowerPoint</span>
+                                    <span class="meter" style="--val: 72%;"></span>
+                                </li>
+                                <li class="meter-item">
+                                    <span class="meter-item__label">HTML5/CSS3</span>
+                                    <span class="meter" style="--val: 85%;"></span>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
 
-        <div class="col">
-            <h3><span class="dot"></span> Hobbies</h3>
-            <ul class="meter-list">
-                <li><span>Book Reading</span><div class="meter"><i style="width:90%"></i></div></li>
-                <li><span>Travelling</span><div class="meter"><i style="width:80%"></i></div></li>
-                <li><span>Playing Chess</span><div class="meter"><i style="width:70%"></i></div></li>
-                <li><span>Graphic Design</span><div class="meter"><i style="width:95%"></i></div></li>
-                <li><span>Painting</span><div class="meter"><i style="width:85%"></i></div></li>
-            </ul>
-        </div>
+                    <div class="card-dark col-md-6">
+                        <section>
+                            <div class="card-dark__head">
+                                <span class="hex"></span>
+                                <h3 class="card-dark__title">HOBBIES</h3>
+                            </div>
 
-        <div class="col">
-            <h3><span class="dot"></span> Languages</h3>
-            <ul class="meter-list">
-                <li><span>English</span><div class="meter"><i style="width:100%"></i></div></li>
-                <li><span>French</span><div class="meter"><i style="width:80%"></i></div></li>
-                <li><span>Spanish</span><div class="meter"><i style="width:70%"></i></div></li>
-                <li><span>German</span><div class="meter"><i style="width:60%"></i></div></li>
-                <li><span>Arabic</span><div class="meter"><i style="width:50%"></i></div></li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Дві колонки: ліворуч досвід, праворуч темна панель -->
-    <main class="content">
-        <section class="experience">
-            <h3><span class="sq"></span> Job Experience</h3>
-
-            <article class="xp">
-                <header>
-                    <h4>Creative Agency <span class="loc">Chicago</span></h4>
-                    <h5>SENIOR WEB DESIGNER <span class="date">2021 – Present</span></h5>
-                </header>
-                <p>
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s…
-                </p>
-            </article>
-
-            <article class="xp">
-                <header>
-                    <h4>Creative Market <span class="loc">United Kingdom</span></h4>
-                    <h5>GRAPHIC DESIGNER <span class="date">2018 – 2021</span></h5>
-                </header>
-                <p>
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s…
-                </p>
-            </article>
-
-            <article class="xp">
-                <header>
-                    <h4>Marketing Agency <span class="loc">United Kingdom</span></h4>
-                    <h5>MARKETING MANAGER <span class="date">2015 – 2018</span></h5>
-                </header>
-                <p>
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s…
-                </p>
-            </article>
-
-            <article class="xp">
-                <header>
-                    <h4>Creative Agency <span class="loc">Chicago</span></h4>
-                    <h5>JUNIOR WEB DESIGNER <span class="date">2010 – 2015</span></h5>
-                </header>
-                <p>
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s…
-                </p>
-            </article>
-        </section>
-
-        <aside class="rail">
-            <section class="panel languages">
-                <h3>LANGUAGES</h3>
-                <ul class="meter-list tight">
-                    <li><span>English</span><div class="meter"><i style="width:100%"></i></div></li>
-                    <li><span>French</span><div class="meter"><i style="width:80%"></i></div></li>
-                    <li><span>Spanish</span><div class="meter"><i style="width:70%"></i></div></li>
-                    <li><span>German</span><div class="meter"><i style="width:60%"></i></div></li>
-                    <li><span>Arabic</span><div class="meter"><i style="width:50%"></i></div></li>
-                </ul>
-            </section>
-
-            <section class="panel refs">
-                <h3>REFERENCES</h3>
-                <div class="ref">
-                    <h4>DARWIN B. MAGANA</h4>
-                    <p>2813 Shobe Lane, Mancos, CO</p>
-                    <p>Tel: +1-970-533-3393</p>
-                    <p>Email: www.yourwebsite.com</p>
+                            <ul class="meter-list">
+                                <li class="meter-item">
+                                    <span class="meter-item__label">Book Reading</span>
+                                    <span class="meter" style="--val: 92%;"></span>
+                                </li>
+                                <li class="meter-item">
+                                    <span class="meter-item__label">Travelling</span>
+                                    <span class="meter" style="--val: 82%;"></span>
+                                </li>
+                                <li class="meter-item">
+                                    <span class="meter-item__label">Playing Chess</span>
+                                    <span class="meter" style="--val: 63%;"></span>
+                                </li>
+                                <li class="meter-item">
+                                    <span class="meter-item__label">Graphic Design</span>
+                                    <span class="meter" style="--val: 88%;"></span>
+                                </li>
+                                <li class="meter-item">
+                                    <span class="meter-item__label">Painting</span>
+                                    <span class="meter" style="--val: 55%;"></span>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
                 </div>
-                <div class="ref">
-                    <h4>ROBERT J. BELVIN</h4>
-                    <p>2119 Fairfax Drive, Newark, NJ</p>
-                    <p>Tel: +1-908-987-5103</p>
-                    <p>Email: www.yourwebsite.com</p>
-                </div>
-            </section>
+            </div>
 
-            <section class="panel edu">
-                <h3>EDUCATION</h3>
-                <div class="edu-item">
-                    <h4>Stanford University <span class="date">2020–2021</span></h4>
-                    <h5>MASTER DEGREE</h5>
-                    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s…</p>
-                </div>
-                <div class="edu-item">
-                    <h4>Chicago University <span class="date">2007–2010</span></h4>
-                    <h5>BACHELOR DEGREE</h5>
-                    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s…</p>
-                </div>
-            </section>
-        </aside>
-    </main>
+            <!-- Праворуч: LANGUAGES -->
+            <div class=" card-blue col-lg-4 mt-4 mt-lg-0">
+                <section class="mb-4"> <!-- Відступ знизу між секціями -->
+                    <h2 class="card-dark__title">LANGUAGES</h2>
+                    <ul class="lang-list">
+                        <li>
+                            <span>English</span>
+                            <span class="meter meter--light" style="--val: 88%;"></span>
+                        </li>
+                        <li>
+                            <span>French</span>
+                            <span class="meter meter--light" style="--val: 62%;"></span>
+                        </li>
+                        <li>
+                            <span>Spanish</span>
+                            <span class="meter meter--light" style="--val: 74%;"></span>
+                        </li>
+                        <li>
+                            <span>German</span>
+                            <span class="meter meter--light" style="--val: 58%;"></span>
+                        </li>
+                        <li>
+                            <span>Arabic</span>
+                            <span class="meter meter--light" style="--val: 40%;"></span>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
 
-    <footer class="foot">
-        <div class="f-item">
-            <span class="i i-layers"></span>
-            <p>Well Organized Layers and Groups</p>
+        <!-- НИЖНІ БЛОКИ: JOB EXPERIENCE + RIGHT COLUMN -->
+        <div class="row gx-4">
+            <div class=" col-lg-8">
+                <h2 class="section-title">
+                    <span class="bullet"></span>
+                    JOB EXPERIENCE
+                </h2>
+
+                <!-- Картка досвіду -->
+                <article class="exp-card">
+                    <div class="exp-card__row">
+                        <span class="location-tag">CHICAGO</span>
+                        <div class="exp-card__title">
+                            <strong>Creative Agency</strong> — <em>Senior Web Designer</em>
+                        </div>
+                    </div>
+                    <p class="exp-card__text">
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+                    </p>
+                </article>
+
+                <article class="exp-card">
+                    <div class="exp-card__row">
+                        <span class="location-tag">UNITED KINGDOM</span>
+                        <div class="exp-card__title">
+                            <strong>Creative Market</strong> — <em>Graphic Designer</em>
+                        </div>
+                    </div>
+                    <p class="exp-card__text">
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+                    </p>
+                </article>
+
+                <article class="exp-card">
+                    <div class="exp-card__row">
+                        <span class="location-tag">UNITED KINGDOM</span>
+                        <div class="exp-card__title">
+                            <strong>Marketing Agency</strong> — <em>Marketing Manager</em>
+                        </div>
+                    </div>
+                    <p class="exp-card__text">
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+                    </p>
+                </article>
+
+                <article class="exp-card mb-0">
+                    <div class="exp-card__row">
+                        <span class="location-tag">CHICAGO</span>
+                        <div class="exp-card__title">
+                            <strong>Creative Agency</strong> — <em>Junior Web Designer</em>
+                        </div>
+                    </div>
+                    <p class="exp-card__text">
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+                    </p>
+                </article>
+            </div>
+
+            <div class="card-dark col-lg-4 mt-5 mt-lg-0">
+
+                <!-- REFERENCES -->
+                <section class="mb-4">
+                    <h2 class="card-dark__title">REFERENCES</h2>
+                    <div class="ref">
+                        <div class="ref__name">DARWIN B. MAGANA</div>
+                        <div class="ref__addr">2813 Shobe Lane Mancos, CO</div>
+                        <div class="ref__row">Tel: +1-970-533-3339</div>
+                        <div class="ref__row">Email: www@yourwebsite.com</div>
+                    </div>
+                    <div class="ref mt-3">
+                        <div class="ref__name">ROBERT J. BELVIN</div>
+                        <div class="ref__addr">2119 Fairfax Drive Newark, NJ</div>
+                        <div class="ref__row">Tel: +1-908-987-5103</div>
+                        <div class="ref__row">Email: www@yourwebsite.com</div>
+                    </div>
+                </section>
+
+                <!-- EDUCATION -->
+                <section class="card-dark">
+                    <h2 class="card-dark__title">EDUCATION</h2>
+
+                    <div class="edu">
+                        <span class="year">2011–2013</span>
+                        <div class="edu__body">
+                            <div class="edu__org">Stanford University</div>
+                            <div class="edu__deg">Master Degree</div>
+                            <p class="edu__text">Industry's standard dummy text ever since the 1500s…</p>
+                        </div>
+                    </div>
+
+                    <div class="edu mt-3">
+                        <span class="year">2005–2009</span>
+                        <div class="edu__body">
+                            <div class="edu__org">Chicago University</div>
+                            <div class="edu__deg">Bachelor Degree</div>
+                            <p class="edu__text">It has survived not only five centuries, but also the leap into electronic typesetting…</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
-        <div class="f-item">
-            <span class="i i-edit"></span>
-            <p>Fully Editable</p>
-        </div>
-        <div class="f-item">
-            <span class="i i-file"></span>
-            <p>PSD File With Smart Object</p>
-        </div>
-    </footer>
+
+    </div>
 </div>
+
+<!-- Bootstrap bundle (копіюється у dist/js) -->
+<script src="./js/bootstrap.bundle.min.js"></script>
+<!-- Твій зібраний JS -->
+<script src="./js/bundle.min.js"></script>
 </body>
 </html>
