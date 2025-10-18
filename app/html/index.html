@@ -44,8 +44,7 @@
                     <div class ="contact-item">
                     <ul class="contact list-unstyled">
                         <li><span class="ci ci-phone"></span> <div class = "numbercolum"> <span>+1-718-310-5588 </span> <span>+1-313-981-8867</span> </div></li>
-                        <li><span class="ci ci-www"></span> www.yourwebsite.com</li>
-                        <li><span class="ci ci-mail"></span> yourinfo@email.com</li>
+                        <li><span class="ci ci-www"></span><div class = "numbercolum"> <span>www.yourwebsite.com </span> <span>yourinfo@email.com</span> </div> </li>
                         <li><span class="ci ci-pin"></span> 769 Prudence Street, Lincoln Park, MI 48146</li>
                     </ul>
                         <div class="vertical-line"/>
@@ -56,7 +55,7 @@
 
         <!-- БЛОКИ ЗЛІВА: SKILLS + HOBBIES (суцільна темна картка); ПРАВОРУЧ: LANGUAGES -->
         <div class="row" style="position: relative;">
-            <div style="height:100% ; background:gray ; width:100px; position: absolute; right: 0; top:0;"> </div>
+            <div style="height:100% ; background:gray ; width:100px; position: absolute; right: 0px; top:0;"> </div>
 
             <!-- Ліворуч -->
             <div class="card-dark col-lg-8">
@@ -65,7 +64,7 @@
                         <section>
                             <div class="card-dark__head">
                                 <span class="hex"></span>
-                                <h3 class="card-dark__title">SKILLS</h3>
+                                <h3 class="card-dark__title card-title">SKILLS</h3>
                             </div>
                             <ul class="meter-list">
                                 <li class="meter-item">
@@ -79,15 +78,15 @@
                                 </li>
                                 <li class="meter-item">
                                     <span class="meter-item__label">Microsoft Word</span>
-                                    <span class="meter" style="--val: 60%;"></span>
+                                    <input type="range" style="--val: 60%;" value="60" >
                                 </li>
                                 <li class="meter-item">
                                     <span class="meter-item__label">PowerPoint</span>
-                                    <span class="meter" style="--val: 72%;"></span>
+                                    <input type="range" style="--val: 72%;" value="72" >
                                 </li>
                                 <li class="meter-item">
                                     <span class="meter-item__label">HTML5/CSS3</span>
-                                    <span class="meter" style="--val: 85%;"></span>
+                                    <input type="range" style="--val: 85%;" value="85" >
                                 </li>
                             </ul>
                         </section>
@@ -97,28 +96,28 @@
                         <section>
                             <div class="card-dark__head">
                                 <span class="hex"></span>
-                                <h3 class="card-dark__title">HOBBIES</h3>
+                                <h3 class="card-dark__title card-title">HOBBIES</h3>
                             </div>
                             <ul class="meter-list">
                                 <li class="meter-item">
                                     <span class="meter-item__label">Book Reading</span>
-                                    <span class="meter" style="--val: 92%;"></span>
+                                    <input type="range" style="--val: 92%;" value="92" >
                                 </li>
                                 <li class="meter-item">
                                     <span class="meter-item__label">Travelling</span>
-                                    <span class="meter" style="--val: 82%;"></span>
+                                    <input type="range" style="--val: 82%;" value="82" >
                                 </li>
                                 <li class="meter-item">
                                     <span class="meter-item__label">Playing Chess</span>
-                                    <span class="meter" style="--val: 63%;"></span>
+                                    <input type="range" style="--val: 63%;" value="63" >
                                 </li>
                                 <li class="meter-item">
                                     <span class="meter-item__label">Graphic Design</span>
-                                    <span class="meter" style="--val: 88%;"></span>
+                                    <input type="range" style="--val: 88%;" value="88" >
                                 </li>
                                 <li class="meter-item">
                                     <span class="meter-item__label">Painting</span>
-                                    <span class="meter" style="--val: 55%;"></span>
+                                    <input type="range" style="--val: 55%;" value="55" >
                                 </li>
                             </ul>
                         </section>
@@ -129,27 +128,27 @@
             <!-- Праворуч: LANGUAGES (окрема темна картка замість синьої) -->
             <div class="col-lg-4" style="padding-left: 0;">
                 <section class="card-blue" style="height:100%">
-                    <h2 class="card-dark__title">LANGUAGES</h2>
+                    <h2 class="card-dark__title card-title">LANGUAGES</h2>
                     <ul class="lang-list">
                         <li>
                             <span>English</span>
-                            <span class="meter meter--light" style="--val: 88%;"></span>
+                            <input type="range" style="--val: 88%;" value="88" >
                         </li>
                         <li>
                             <span>French</span>
-                            <span class="meter meter--light" style="--val: 62%;"></span>
+                            <input type="range" style="--val: 62%;" value="62" >
                         </li>
                         <li>
                             <span>Spanish</span>
-                            <span class="meter meter--light" style="--val: 74%;"></span>
+                            <input type="range" style="--val: 74%;" value="74" >
                         </li>
                         <li>
                             <span>German</span>
-                            <span class="meter meter--light" style="--val: 58%;"></span>
+                            <input type="range" style="--val: 58%;" value="58" >
                         </li>
                         <li>
                             <span>Arabic</span>
-                            <span class="meter meter--light" style="--val: 40%;"></span>
+                            <input type="range" style="--val: 40%;" value="40" >
                         </li>
                     </ul>
                 </section>
@@ -161,80 +160,90 @@
         <!-- НИЖНІ БЛОКИ: JOB EXPERIENCE + ПРАВА КОЛОНКА (REFERENCES, EDUCATION окремо) -->
         <div class="row  rownew">
             <div class="col-lg-8">
-                <h2 class="section-title">
-                    <span class="bullet"></span>
-                    JOB EXPERIENCE
-                </h2>
+                <div class="job-experience-wrapper">
+                    <h2 class="section-title card-title_dark ">
+                        <span class="icon"></span>
+                        JOB EXPERIENCE
+                    </h2>
 
-                <article class="exp-card">
-                    <div class="exp-card__row">
-                        <span class="location-tag">CHICAGO</span>
-                        <div class="exp-card__title">
-                            <strong>Creative Agency</strong> — <em>Senior Web Designer</em>
+                    <article class="exp-item">
+                        <div class="exp-item__date">2021-Present</div>
+                        <div class="exp-item__content">
+                            <div>
+                                <div class="exp-item__company">Creative Agency</div>
+                                <div class="exp-item__location">Chicago</div>
+                            </div>
+                            <h3 class="exp-item__position">Senior Web Designer</h3>
+                            <p class="exp-item__description">
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            </p>
                         </div>
-                    </div>
-                    <p class="exp-card__text">
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
-                    </p>
-                </article>
+                    </article>
 
-                <article class="exp-card">
-                    <div class="exp-card__row">
-                        <span class="location-tag">UNITED KINGDOM</span>
-                        <div class="exp-card__title">
-                            <strong>Creative Market</strong> — <em>Graphic Designer</em>
+                    <article class="exp-item">
+                        <div class="exp-item__date">2018-2021</div>
+                        <div class="exp-item__content">
+                            <div>
+                                <div class="exp-item__company">Creative Market</div>
+                                <div class="exp-item__location">United Kingdom</div>
+                            </div>
+                            <h3 class="exp-item__position">Graphic Designer</h3>
+                            <p class="exp-item__description">
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            </p>
                         </div>
-                    </div>
-                    <p class="exp-card__text">
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
-                    </p>
-                </article>
+                    </article>
 
-                <article class="exp-card">
-                    <div class="exp-card__row">
-                        <span class="location-tag">UNITED KINGDOM</span>
-                        <div class="exp-card__title">
-                            <strong>Marketing Agency</strong> — <em>Marketing Manager</em>
+                    <article class="exp-item">
+                        <div class="exp-item__date">2016-2018</div>
+                        <div class="exp-item__content">
+                            <div>
+                                <div class="exp-item__company">Marketing Agency</div>
+                                <div class="exp-item__location">United Kingdom</div>
+                            </div>
+                            <h3 class="exp-item__position">Marketing Manager</h3>
+                            <p class="exp-item__description">
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            </p>
                         </div>
-                    </div>
-                    <p class="exp-card__text">
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
-                    </p>
-                </article>
+                    </article>
 
-                <article class="exp-card ">
-                    <div class="exp-card__row">
-                        <span class="location-tag">CHICAGO</span>
-                        <div class="exp-card__title">
-                            <strong>Creative Agency</strong> — <em>Junior Web Designer</em>
+                    <article class="exp-item">
+                        <div class="exp-item__date">2013-2016</div>
+                        <div class="exp-item__content">
+                            <div>
+                                <div class="exp-item__company">Creative Agency</div>
+                                <div class="exp-item__location">Chicago</div>
+                            </div>
+                            <h3 class="exp-item__position">Junior Web Designer</h3>
+                            <p class="exp-item__description">
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            </p>
                         </div>
-                    </div>
-                    <p class="exp-card__text">
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
-                    </p>
-                </article>
+                    </article>
+                </div>
             </div>
 
             <!-- Права колонка: дві окремі картки -->
-            <div class="col-lg-4">
+            <div class="col-lg-4 " style="padding-left: 0; display: flex; flex-direction: column;">
                 <section class="card-dark">
-                    <h2 class="card-dark__title">REFERENCES</h2>
+                    <h2 class="card-dark__title card-title">REFERENCES</h2>
                     <div class="ref">
                         <div class="ref__name">DARWIN B. MAGANA</div>
-                        <div class="ref__addr">2813 Shobe Lane Mancos, CO</div>
+                        <div class="ref__addr bluecoursive">2813 Shobe Lane Mancos, CO</div>
                         <div class="ref__row">Tel: +1-970-533-3339</div>
                         <div class="ref__row">Email: www@yourwebsite.com</div>
                     </div>
                     <div class="ref">
                         <div class="ref__name">ROBERT J. BELVIN</div>
-                        <div class="ref__addr">2119 Fairfax Drive Newark, NJ</div>
+                        <div class="ref__addr bluecoursive">2119 Fairfax Drive Newark, NJ</div>
                         <div class="ref__row">Tel: +1-908-987-5103</div>
                         <div class="ref__row">Email: www@yourwebsite.com</div>
                     </div>
                 </section>
 
-                <section class="card-dark" style="display:flex; flex-direction:column; gap: 20px">
-                    <h2 class="card-dark__title">EDUCATION</h2>
+                <section class="card-dark" style="display:flex; flex-direction:column; gap: 20px; flex-grow: 1;">
+                    <h2 class="card-dark__title card-title">EDUCATION</h2>
 
                     <div class="edu">
                         <span class="year">2011–2013</span>
@@ -256,6 +265,7 @@
                 </section>
             </div>
         </div>
+        <div class="bluesmuga"> </div>
 
     </div>
 </div>
