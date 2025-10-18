@@ -287,8 +287,8 @@ body {
   padding: 20px 8px;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-
 }
+
 
 input[type="range"] {
   -webkit-appearance: none; /* прибирає стандартний вигляд */
@@ -301,7 +301,7 @@ input[type="range"] {
 /* Лінія повзунка */
 input[type="range"]::-webkit-slider-runnable-track {
   height: 6px;
-  background: linear-gradient(90deg, #007aff var(--val, 78%), #ddd 0%);
+  background: linear-gradient(90deg, rgb(17,116,175) var(--val, 78%), rgb(69 70 75) 0%);
   border-radius: 3px;
 }
 
@@ -309,18 +309,43 @@ input[type="range"]::-webkit-slider-runnable-track {
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 18px;
-  height: 18px;
-  background: #007aff;
-  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: rgb(17,116,175);
   cursor: pointer;
-  margin-top: -6px; /* вирівнювання по центру треку */
+  margin-top: -2.2px; /* вирівнювання по центру треку */
   transition: background 0.2s;
 }
+
+
 
 input[type="range"]::-webkit-slider-thumb:hover {
   background: #005ecb;
 }
+
+input[type="range"].slider-special::-webkit-slider-runnable-track {
+  height: 6px;
+  background: linear-gradient(90deg,  rgb(46,49,54) var(--val, 78%), rgb(33 142 207) 0%);
+  border-radius: 3px;
+}
+
+/* Кнопка (повзунок) для нового класу */
+input[type="range"].slider-special::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background: rgb(46,49,54);
+  cursor: pointer;
+  margin-top: -2.2px; /* вирівнювання по центру треку */
+  transition: background 0.2s;
+}
+
+/* Кнопка при наведенні для нового класу */
+input[type="range"].slider-special::-webkit-slider-thumb:hover {
+  background: rgb(46,49,54); /* Новий колір при наведенні */
+}
+
 /* Головний контейнер */
 .job-experience-wrapper {
   max-width: 800px;
