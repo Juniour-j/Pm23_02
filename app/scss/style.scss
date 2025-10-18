@@ -1,11 +1,11 @@
-/* ================== TOKENS ================== */
+
 $blue: #043681;
-$blue-dark:   #1658b5;
-$ink:         #111319;
+$blue-dark: #1658b5;
+$ink: #111319;
 $dark: #000000;
-$muted:       #6d7785;
-$page:        #f1f3f6;
-$border:      #e7ecf5;
+$muted: #6d7785;
+$page: #f1f3f6;
+$border: #e7ecf5;
 
 /* ================== GLOBAL ================== */
 * { box-sizing: border-box; }
@@ -16,13 +16,27 @@ body {
   font-family: "Inter","Segoe UI",Roboto,Arial,sans-serif;
 }
 
-/* «Аркуш» резюме */
+/* резюме */
 .resume {
+  position: relative; /* потрібне для верхньої смужки */
   background: #fff;
   max-width: 960px;
   margin: 40px auto;
   border-radius: 10px;
   box-shadow: 0 20px 50px rgba(20,28,40,.15);
+
+  /* Верхня синя смужка сторінки */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 14px;
+    width: 290px;
+    background: $blue;
+    margin-right: 20px;
+    box-shadow: 0 6px 14px rgba(31,111,222,.25);
+  }
 }
 
 /* Фото */
@@ -40,21 +54,46 @@ body {
 .role  { color:$blue; font-style:italic; font-weight:600; }
 .intro { color:$muted; }
 
-/* ================== DARK CARDS ================== */
-.card-dark {
-  background:$dark; color:#fff;
-  padding:30px 30px; position:relative; border:0;
 
-  &__head { display:flex; align-items:center; gap:8px; margin-bottom:12px; }
-  &__title{ font-size:15px; letter-spacing:.8px; font-weight:800; margin:0; }
-}
+
+/* ================== DARK & BLUE CARDS  ================== */
+.card-dark,
 .card-blue{
-  background:#043681FF; color:#fff;
-  padding:30px 30px; position:relative; border:0;
-
-  &__head { display:flex; align-items:center; gap:8px; margin-bottom:12px; }
-  &__title{ font-size:15px; letter-spacing:.8px; font-weight:800; margin:0; }
+  padding: 30px;
+  position: relative;
+  border: 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,.18);
 }
+
+.card-dark{ background: $dark; color:#fff; }
+.card-blue{ background: $blue; color:#fff; }
+.rownew {
+  padding-left: 0;
+
+}
+/* Рядок з колонами однакової висоти */
+.row.stretch > [class*="col-"]{ display:flex; }
+.row.stretch > [class*="col-"] > section{ width:100%; display:flex; flex-direction:column; }
+
+.numbercolum {
+    display: flex; flex-direction: column; align-items: center;
+}
+/* Заголовки карток — однакова стилістика */
+.card-title {
+  font-size: 15px;
+  letter-spacing: .8px;
+  font-weight: 800;
+  margin: 0 0 12px;
+  border-bottom: 2px solid gray;
+}
+.card-tab::before{
+  content:""; position:absolute; height:12px; background:$blue;
+  top:-10px; width:220px;
+  box-shadow:0 6px 14px rgba(31,111,222,.35);
+}
+.card-tab--right::before{ right:10px; }
+.card-tab--center::before{ left:50%; transform:translateX(-50%); }
+
 
 /* Hex-іконка перед SKILLS/HOBBIES */
 .hex {
@@ -74,7 +113,22 @@ body {
 }
 
 /* Контакти */
-.contact { li{ padding:6px 0; border-bottom:1px solid rgba(255,255,255,.08); } li:last-child{ border-bottom:0; } }
+.contact {
+  li{
+    padding:6px 0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    display:flex; align-items:center;
+  }
+  li:last-child{ border-bottom:0; }
+}
+
+.contact-item {
+  position: relative;
+}
+.vertical-line {
+  content:""; position:absolute; left:-10px; top:0; bottom:0;
+  width:10px; background:gray;
+}
 .ci { display:inline-block; width:16px; margin-right:8px; opacity:.9; }
 .ci-phone::before{ content:"📞"; } .ci-www::before{ content:"🌐"; }
 .ci-mail::before{ content:"✉️"; } .ci-pin::before{ content:"📍"; }
@@ -82,17 +136,17 @@ body {
 /* ================== METERS ================== */
 .meter-list { list-style:none; margin:0; padding:0; }
 .meter-item { display:grid; grid-template-columns:1fr 160px; align-items:center; gap:12px; padding:8px 0; }
-.meter-item__label { color:#ced6e0; font-size:13px; }
+.meter-item__label { color:#ced6e0; font-size:13px; white-space: nowrap; }
 
 .meter {
   --val:0%;
   display:block; height:6px; width:100%;
   background:rgba(255,255,255,.14);
-  border-radius:3px; overflow:hidden; position:relative;
+   overflow:hidden; position:relative;
 
   &::after{
     content:""; position:absolute; inset:0; width:var(--val);
-    background:$blue; border-radius:3px;
+    background:$blue;
   }
 
   &--light{
@@ -104,16 +158,20 @@ body {
 /* Заголовок секції */
 .section-title{
   font-size:15px; letter-spacing:.8px; font-weight:800; margin:6px 0 16px;
-  display:flex; align-items:center; gap:10px; color:#2a3443;
+  display:flex; align-items:center; gap:10px; color:#2a3443; text-transform:uppercase;
   .bullet{
-    width:12px; height:12px; background:$blue; border-radius:50%;
+    width:12px; height:12px; background:$blue;
     box-shadow: 0 0 0 5px rgba(31,111,222,.18);
   }
 }
 
 /* Картки досвіду */
+.groundcard {
+  color :#fff; background:rgba(255,255,255,.05);
+
+}
 .exp-card{
-  background:#fff; border:1px solid $border; border-radius:10px;
+  background:#fff; border:1px solid $border;
   padding:14px 16px; margin-bottom:14px;
   box-shadow:0 3px 0 rgba(31,111,222,.08);
 
@@ -124,11 +182,16 @@ body {
   }
   &__text{ color:$muted; margin:0; }
 }
-
+.card-dark__head {
+  display: flex; align-items: center; gap:12px; margin-bottom:30px;
+}
 /* Бирка місця */
 .location-tag{
   display:inline-block; font-size:11px; font-weight:800; letter-spacing:.4px;
-  padding:3px 10px; color:#fff; background:$blue; border-radius:4px;
+  padding:3px 10px; color:#fff; background:$blue;
+}
+.card-dark__title {
+    font-size:16px; font-weight:800; margin:0;
 }
 
 /* Список мов у правій колонці */
@@ -147,10 +210,10 @@ body {
 .ref__addr,.ref__row{ font-size:13px; opacity:.95; }
 
 /* Education */
-.edu{ display:grid; grid-template-columns:100px 1fr; gap:14px; align-items:start; color:#e7efff; }
+.edu{ display:grid; grid-template-columns:40px 1fr; gap:14px; align-items:start; color:#e7efff; }
 .year{
-  display:inline-block; text-align:center; min-width:90px;
-  background:$blue; color:#fff; padding:4px 10px; border-radius:4px;
+  display:inline-block; text-align:center; max-width:30px;
+  background:$blue; color:#fff; padding:4px 10px;
   font-weight:800; font-size:12px;
 }
 .edu__org{ font-weight:800; }
@@ -159,3 +222,90 @@ body {
 
 /* Utilities */
 .bg-page{ background:$page; }
+/* ================== LAYOUT FIX FOR RIGHT COLUMN ================== */
+
+/* Фіксована ширина правої колонки — вигляд як у шаблоні */
+.col-lg-4 {
+  max-width: 330px;
+}
+
+/* Всі картки правої колонки рівні по ширині */
+.col-lg-4 > section {
+  width: 100%;
+}
+
+/* Акуратне вирівнювання відступів усередині */
+.card-dark, .card-blue {
+  padding: 26px 26px 22px;
+}
+
+/* Вирівнюємо верхню синю закладку */
+.card-tab::before {
+  height: 10px;
+  width: 240px;
+  top: -8px;
+  box-shadow: 0 3px 10px rgba(31,111,222,.35);
+}
+
+/* Додаємо легку “глибину” правим блокам */
+.card-dark, .card-blue {
+  box-shadow: 0 10px 20px rgba(0,0,0,.25);
+}
+
+/* Точніше вирівнюємо текст у списках контактів */
+.contact li {
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+/* Усі “LANGUAGES” метри трохи компактніші */
+.lang-list li {
+  grid-template-columns: 1fr 120px;
+  padding: 5px 0;
+}
+
+/* Education — підтягуємо текст ближче */
+.edu__text {
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+.year {
+  font-size: 11.5px;
+
+  padding: 20px 8px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+
+}
+
+input[type="range"] {
+  -webkit-appearance: none; /* прибирає стандартний вигляд */
+  height: 6px;
+  background: #ddd;
+  border-radius: 3px;
+  outline: none;
+}
+
+/* Лінія повзунка */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+  background: linear-gradient(90deg, #007aff var(--val, 78%), #ddd 0%);
+  border-radius: 3px;
+}
+
+/* Кнопка (повзунок) */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #007aff;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -6px; /* вирівнювання по центру треку */
+  transition: background 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: #005ecb;
+}

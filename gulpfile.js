@@ -8,36 +8,47 @@ const uglify = require("gulp-uglify");
 const concat = require("gulp-concat");
 const imagemin = require("gulp-imagemin");
 const browserSync = require("browser-sync").create();
+const fileinclude = require("gulp-file-include"); // ← ✅ додали
 
 const paths = {
-    html: { src: "app/**/*.html", dest: "dist/" },
-    scss: { src: "app/scss/*.scss", dest: "dist/css/" }, // лише вхідні
+    html: {
+        // беремо всі html і ВИКЛЮЧАЄМО частинки (partials) та файли, що починаються з "_"
+        src: ["app/**/*.html", "!app/**/_*.html", "!app/**/partials/**"],
+        dest: "dist/"
+    },
+    scss: { src: "app/scss/*.scss", dest: "dist/css/" },
     js:   { src: "app/js/**/*.js", dest: "dist/js/" },
     img:  { src: "app/img/**/*.{png,jpg,jpeg,svg,gif,webp}", dest: "dist/img/" },
     bs: {
         css: "node_modules/bootstrap/dist/css/bootstrap.min.css",
         js:  "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-    }
+    },
+    // окремий патерн для перегляду змін уpartials/_*.html
+    htmlWatch: ["app/**/*.html", "app/**/_*.html", "app/**/partials/**/*.html"]
 };
 
-
-// ---------- ЛР2: таски копіювання Bootstrap ----------
+// ---------- таски копіювання Bootstrap ----------
 function bootstrapCss() {
     return src(paths.bs.css)
-        .pipe(dest(paths.scss.dest)) // у dist/css
+        .pipe(dest(paths.scss.dest))
         .pipe(browserSync.stream());
 }
 
 function bootstrapJs() {
     return src(paths.bs.js)
-        .pipe(dest(paths.js.dest)) // у dist/js
+        .pipe(dest(paths.js.dest))
         .pipe(browserSync.stream());
 }
 // -----------------------------------------------------
 
 function html() {
     return src(paths.html.src)
-        // якщо html лежать у вкладених, сплощуємо структуру у dist/
+        .pipe(fileinclude({
+            prefix: '@@',          // @@include
+            basepath: '@file',     // шукати partials відносно файл
+            indent: true, // зберігати відступи(
+        }))
+        // сплощуємо структуру у dist/ (за потреби можна прибрати)
         .pipe(rename(p => { p.dirname = ""; }))
         .pipe(dest(paths.html.dest))
         .pipe(browserSync.stream());
@@ -51,7 +62,6 @@ function styles() {
         .pipe(dest(paths.scss.dest))
         .pipe(browserSync.stream());
 }
-
 
 function scripts() {
     return src(paths.js.src)
@@ -73,15 +83,12 @@ function reload(done) { browserSync.reload(); done(); }
 function serve() {
     browserSync.init({ server: { baseDir: "dist" }, open: false, notify: false });
 
-    watch(paths.html.src, html);
+    watch(paths.htmlWatch, html);     // ← ✅ відслідковуємо і partials
     watch(paths.scss.src, styles);
     watch(paths.js.src, scripts);
     watch(paths.img.src, series(images, reload));
-
-    // Bootstrap з node_modules рідко змінюється, watch не обов'язковий.
 }
 
-// у збірку включаємо і Bootstrap
 const build = series(
     parallel(bootstrapCss, bootstrapJs, html, styles, scripts, images)
 );

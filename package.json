@@ -744,6 +744,7 @@
   },
   "homepage": "https://github.com/Juniour-j/Pm23_02#readme",
   "devDependencies": {
-    "bootstrap": "^5.3.8"
+    "bootstrap": "^5.3.8",
+    "gulp-file-include": "^2.3.0"
   }
 }
