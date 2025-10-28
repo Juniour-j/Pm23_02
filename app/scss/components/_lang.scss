@@ -1,0 +1,31 @@
+@use "../variables/variables" as *;
+/* Список мов у правій колонці */
+.lang-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: grid;
+    grid-template-columns:1fr 160px;
+    align-items: center;
+    gap: 12px;
+    color: #d7e2f3;
+    padding: 6px 0;
+
+    span:first-child {
+      font-size: 13px;
+    }
+  }
+}
+/* Точніше вирівнюємо текст у списках контактів */
+.contact li {
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+/* Усі “LANGUAGES” метри трохи компактніші */
+.lang-list li {
+  grid-template-columns: 1fr 120px;
+  padding: 5px 0;
+}

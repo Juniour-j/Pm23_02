@@ -1,0 +1,84 @@
+@use "../variables/variables" as *;
+/* Головний контейнер */
+.job-experience-wrapper {
+  max-width: 800px;
+  margin: auto;
+  background-color: #fff;
+  padding: 0px;
+}
+
+/* Заголовок секції "JOB EXPERIENCE" */
+.section-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.section-title .icon {
+  width: 35px;
+  height: 35px;
+  background-color: #0d6efd; /* Синій колір, як на зразку */
+  margin-right: 15px;
+  /* Сюди можна додати іконку портфеля через background-image */
+}
+
+/* Кожен елемент досвіду роботи */
+.exp-item {
+  display: flex; /* Використовуємо Flexbox для розміщення дати та контенту */
+  margin-bottom: 30px; /* Відступ між елементами */
+}
+
+/* Синій блок з датою */
+.exp-item__date {
+  background-color: rgb(17, 116, 175);
+  color: white;
+  padding: 10px 5px;
+  writing-mode: vertical-rl; /* Вертикальний текст */
+  transform: rotate(180deg); /* Поворот для правильного читання */
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.8rem;
+  flex-shrink: 0; /* Забороняємо блоку стискатися */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Блок з основним контентом (справа від дати) */
+.exp-item__content {
+  padding-left: 25px;
+}
+
+/* Назва компанії та локація */
+.exp-item__company {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #444;
+}
+
+.exp-item__location {
+  font-weight: 400;
+  color: #666;
+  margin-left: 8px;
+}
+
+/* Посада */
+.exp-item__position {
+  font-size: 1.1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #222;
+  margin: 5px 0 10px 0;
+}
+
+/* Опис */
+.exp-item__description {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}

@@ -1,0 +1,55 @@
+@use "../variables/variables" as *;
+input[type="range"] {
+  -webkit-appearance: none; /* прибирає стандартний вигляд */
+  height: 6px;
+  background: #ddd;
+  border-radius: 3px;
+  outline: none;
+}
+
+/* Лінія повзунка */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+  background: linear-gradient(90deg, rgb(17, 116, 175) var(--val, 78%), rgb(69 70 75) 0%);
+  border-radius: 3px;
+}
+
+/* Кнопка (повзунок) */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background: rgb(17, 116, 175);
+  cursor: pointer;
+  margin-top: -2.2px; /* вирівнювання по центру треку */
+  transition: background 0.2s;
+}
+
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: #005ecb;
+}
+
+input[type="range"].slider-special::-webkit-slider-runnable-track {
+  height: 6px;
+  background: linear-gradient(90deg, rgb(46, 49, 54) var(--val, 78%), rgb(33 142 207) 0%);
+  border-radius: 3px;
+}
+
+/* Кнопка (повзунок) для нового класу */
+input[type="range"].slider-special::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background: rgb(46, 49, 54);
+  cursor: pointer;
+  margin-top: -2.2px; /* вирівнювання по центру треку */
+  transition: background 0.2s;
+}
+
+/* Кнопка при наведенні для нового класу */
+input[type="range"].slider-special::-webkit-slider-thumb:hover {
+  background: rgb(46, 49, 54); /* Новий колір при наведенні */
+}

@@ -1,0 +1,47 @@
+@use "../variables/variables" as *;
+/* Контакти */
+.contact {
+  li {
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+    display: flex;
+    align-items: center;
+  }
+
+  li:last-child {
+    border-bottom: 0;
+  }
+}
+
+.contact-item {
+  position: relative;
+}
+
+.vertical-line {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: white;
+}
+
+.ci {
+  display: inline-block;
+  width: 16px;
+  margin-right: 8px;
+  opacity: .9;
+}
+
+.ci-phone::before {
+  content: "📞";
+}
+
+.ci-www::before {
+  content: "🌐";
+}
+
+.ci-pin::before {
+  content: "📍";
+}

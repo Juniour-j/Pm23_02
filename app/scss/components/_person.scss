@@ -1,0 +1,38 @@
+@use "../variables/variables" as *;
+/* Фото */
+.photo {
+  width: 140px;
+  height: 160px;
+  object-fit: cover;
+  border: 4px solid rgb(17, 116, 175);
+}
+
+/* Імʼя/роль */
+.person-name {
+  line-height: 1.1;
+
+  .person-name__bold {
+    display: block;
+    font-weight: 800;
+    font-size: 34px;
+    letter-spacing: .5px;
+  }
+
+  .person-name__light {
+    display: block;
+    color: #7c8796;
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: .4px;
+  }
+}
+
+.role {
+  color: $blue;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.intro {
+  color: $muted;
+}

@@ -84,7 +84,7 @@ function serve() {
     browserSync.init({ server: { baseDir: "dist" }, open: false, notify: false });
 
     watch(paths.htmlWatch, html);     // ← ✅ відслідковуємо і partials
-    watch(paths.scss.src, styles);
+    watch("app/scss/**/*.scss", styles);
     watch(paths.js.src, scripts);
     watch(paths.img.src, series(images, reload));
 }

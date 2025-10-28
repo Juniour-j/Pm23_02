@@ -1,0 +1,23 @@
+@use "../variables/variables" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+.px-4 {
+  padding-left: 1rem!important;
+  padding-right: 1.5rem !important;}
+
+body {
+  background: $page;
+  color: $ink;
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+}
+/* Utilities */
+.bg-page {
+  background: $page;
+}

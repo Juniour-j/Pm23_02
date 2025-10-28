@@ -1,0 +1,21 @@
+@use "../variables/variables" as *;
+/* ================== METERS ================== */
+.meter-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.meter-item {
+  display: grid;
+  grid-template-columns:1fr 160px;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+}
+
+.meter-item__label {
+  color: #ced6e0;
+  font-size: 13px;
+  white-space: nowrap;
+}

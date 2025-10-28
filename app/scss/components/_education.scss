@@ -1,0 +1,62 @@
+@use "../variables/variables" as *;
+/* References */
+.ref {
+  color: #d6e1f2;
+}
+
+.ref__name {
+  font-weight: 800;
+  letter-spacing: .4px;
+}
+
+.ref__addr, .ref__row {
+  font-size: 13px;
+  opacity: .95;
+}
+
+/* Education */
+.edu {
+  display: grid;
+  grid-template-columns:40px 1fr;
+  gap: 14px;
+  align-items: start;
+  color: #e7efff;
+}
+
+.year {
+  display: inline-block;
+  text-align: center;
+  max-width: 30px;
+  background: rgb(17, 116, 175);
+  color: #fff;
+  padding: 4px 10px;
+  font-weight: 800;
+  font-size: 12px;
+}
+
+.edu__org {
+  font-weight: 800;
+}
+
+.edu__deg {
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.edu__text {
+  color: #bdd1f6;
+  font-size: 13px;
+  margin: 6px 0 0;
+}
+/* Education — підтягуємо текст ближче */
+.edu__text {
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+
+.year {
+  font-size: 11.5px;
+  padding: 20px 8px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}

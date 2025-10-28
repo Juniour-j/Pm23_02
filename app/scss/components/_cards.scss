@@ -1,0 +1,82 @@
+@use "../variables/variables" as *;
+/* ================== DARK & BLUE CARDS  ================== */
+.card-dark,
+.card-blue {
+  padding: 30px;
+  position: relative;
+  border: 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .18);
+}
+
+.card-dark {
+  background: rgb(48, 49, 54);
+  color: #fff;
+}
+
+.card-blue {
+  background: rgb(17, 116, 175);
+  color: #fff;
+}
+/* Заголовки карток — однакова стилістика */
+.card-title {
+  font-size: 15px;
+  letter-spacing: .8px;
+  font-weight: 800;
+  margin: 0 0 12px;
+  border-bottom: 2px solid white;
+}
+
+
+/* Hex-іконка перед SKILLS/HOBBIES */
+.hex {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  position: relative;
+  border: 3px solid #6c757d;
+  transform: rotate(45deg);
+}
+/* Заголовок секції */
+.section-title {
+  font-size: 15px;
+  letter-spacing: .8px;
+  font-weight: 800;
+  margin: 6px 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #2a3443;
+  text-transform: uppercase;
+}
+
+/* Картки досвіду */
+.card-dark__head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.card-dark__title {
+  font-size: 16px;
+  font-weight: 800;
+  margin: 0;
+}
+.bluecoursive {
+  font-style: italic;
+  color: #1658b5;
+}
+/* Акуратне вирівнювання відступів усередині */
+.card-dark, .card-blue {
+  padding: 26px 26px 22px;
+}
+
+
+/* Додаємо легку “глибину” правим блокам */
+.card-dark, .card-blue {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
+}
+/* чорна смуужка */
+.card-title_dark {
+  border-bottom: 2px solid #000;
+}

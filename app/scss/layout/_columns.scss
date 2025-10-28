@@ -1,0 +1,30 @@
+@use "../variables/variables" as *;
+.rownew {
+  padding-left: 0;
+
+}
+
+/* Рядок з колонами однакової висоти */
+.row.stretch > [class*="col-"] {
+  display: flex;
+}
+
+.row.stretch > [class*="col-"] > section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.numbercolum {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Фіксована ширина правої колонки — вигляд як у шаблоні */
+.col-lg-4 {
+  max-width: 330px;
+}
+
+/* Всі картки правої колонки рівні по ширині */
+.col-lg-4 > section {
+  width: 100%;
+}
