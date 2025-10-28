@@ -1,19 +1,23 @@
 @use "../variables/variables" as *;
+@use "../helpers/mixins" as *;
+@use "../base/cards-base";
 /* ================== DARK & BLUE CARDS  ================== */
 .card-dark,
 .card-blue {
   padding: 30px;
   position: relative;
   border: 0;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, .18);
+  @include elevate(8px, 20px, .18);
 }
 
 .card-dark {
+  @extend %card-base;
   background: rgb(48, 49, 54);
   color: #fff;
 }
 
 .card-blue {
+  @extend %card-base;
   background: rgb(17, 116, 175);
   color: #fff;
 }
@@ -26,7 +30,14 @@
   border-bottom: 2px solid white;
 }
 
-
+.card-title_notenoughsize {
+  padding-right: 171px;
+  font-size: 15px;
+  letter-spacing: .8px;
+  font-weight: 800;
+  margin: 0 0 12px;
+  border-bottom: 2px solid white;
+}
 /* Hex-іконка перед SKILLS/HOBBIES */
 .hex {
   width: 18px;

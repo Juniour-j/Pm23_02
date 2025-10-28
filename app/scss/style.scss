@@ -3,6 +3,7 @@
 
 /* 2) База */
 @use 'base/base';
+@use 'base/cards-base';
 
 /* 3) Макет/лейаут */
 @use 'layout/resume';
@@ -18,3 +19,4 @@
 @use 'components/education';
 @use 'components/range';
 @use 'components/jobexp';
+@use 'helpers/mixins';

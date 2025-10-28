@@ -1,9 +1,13 @@
 @use "../variables/variables" as *;
 /* Список мов у правій колонці */
 .lang-list {
+  display: flex;
+    flex-direction: column;
+  padding-left: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   list-style: none;
   margin: 0;
-  padding: 0;
 
   li {
     display: grid;
@@ -11,7 +15,7 @@
     align-items: center;
     gap: 12px;
     color: #d7e2f3;
-    padding: 6px 0;
+    padding: 10px 0;
 
     span:first-child {
       font-size: 13px;
@@ -27,5 +31,5 @@
 /* Усі “LANGUAGES” метри трохи компактніші */
 .lang-list li {
   grid-template-columns: 1fr 120px;
-  padding: 5px 0;
+  padding: 10px 0;
 }

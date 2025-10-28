@@ -1,8 +1,10 @@
 @use "../variables/variables" as *;
 /* Фото */
+$photo-w: 140px;
+$golden: 1.14285714;
 .photo {
-  width: 140px;
-  height: 160px;
+  width: $photo-w;
+  height: $photo-w * $golden; // 140 * 1.14285714 = 160px
   object-fit: cover;
   border: 4px solid rgb(17, 116, 175);
 }
