@@ -15,6 +15,11 @@
   font-weight: 700;
   color: #333;
   margin-bottom: 30px;
+  margin-top: 40px;
+}
+
+.margtop {
+  margin-top: 20px;
 }
 
 .section-title .icon {
@@ -45,6 +50,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 107px;
+  margin-top: 20px;
 }
 
 
@@ -64,6 +71,8 @@
   font-weight: 400;
   color: #666;
   margin-left: 8px;
+  // курсив
+   font-style: italic;
 }
 
 /* Посада */
