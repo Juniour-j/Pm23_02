@@ -40,12 +40,13 @@
 .exp-item__date {
   background-color: rgb(17, 116, 175);
   color: white;
-  padding: 10px 5px;
+  padding: 0px 0px;
   writing-mode: vertical-rl; /* Вертикальний текст */
   transform: rotate(180deg); /* Поворот для правильного читання */
   text-align: center;
   font-weight: bold;
   font-size: 0.8rem;
+  letter-spacing: 0.5px;
   flex-shrink: 0; /* Забороняємо блоку стискатися */
   display: flex;
   align-items: center;
@@ -70,7 +71,7 @@
 .exp-item__location {
   font-weight: 400;
   color: #666;
-  margin-left: 8px;
+  margin-left: 0px;
   // курсив
    font-style: italic;
 }

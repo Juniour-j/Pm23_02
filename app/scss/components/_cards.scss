@@ -75,6 +75,7 @@
 }
 .bluecoursive {
   font-style: italic;
+  font-weight: bold;
   color: rgb(17, 116, 175);
 }
 /* Акуратне вирівнювання відступів усередині */
@@ -92,10 +93,12 @@
   border-bottom: 2px solid #000;
 }
 .icons {
-  background: rgb(17, 116, 175); padding: 4px 4px 4px 6px
+  background: rgb(17, 116, 175); padding: 4px 4px 4px 6px;
+  margin-right: 10px;
 }
 .iconsdark {
-  background:  rgb(48, 49, 54); padding: 4px 4px 4px 6px
+  background:  rgb(48, 49, 54); padding: 4px 4px 4px 6px;
+  margin-right: 10px;
 }
 .flexicons {
   display: flex;
