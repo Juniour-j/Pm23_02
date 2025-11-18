@@ -9,7 +9,17 @@
                 <section>
                     <div class="card-dark__head">
                         <h3 class="card-dark__title card-title_notenoughsize" style="padding-right: 160px;"> <i class="fa-solid fa-circle icons"  role="img"></i> SKILLS</h3>
+                        <button
+                                class="toggle-arrow"
+                                type="button"
+                                data-toggle="section"
+                                data-target="skillsBody"
+                                aria-expanded="true"
+                        >
+                            ▾
+                        </button>
                     </div>
+                    <div class="js-collapsible-body" id="skillsBody">
                     <ul class="meter-list">
                         <li class="meter-item">
                             <span class="meter-item__label">Adobe Photoshop</span>
@@ -33,6 +43,7 @@
                             <input type="range" style="--val: 85%;" value="85" >
                         </li>
                     </ul>
+                    </div>
                 </section>
             </div>
 
@@ -71,7 +82,7 @@
     <!-- Праворуч: LANGUAGES (окрема темна картка замість синьої) -->
     <div class="col-lg-4" style="padding-left: 0;">
         <section class="card-blue" style="height:100%">
-            <h2 class="card-dark__title card-title"> <i class="fa-solid fa-globe iconsdark"  role="img"></i> LANGUAGES</h2>
+            <h2 class="card-dark__title card-title"><i class="fa-solid fa-earth-americas iconsdark" role= "img"></i>LANGUAGES</h2>
             <ul class="lang-list">
                 <li>
                     <span>English</span>
