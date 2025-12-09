@@ -1,8 +1,7 @@
-
 "use strict";
 
 // ===== 1) Вставка ПІБ у елемент за id =====
-const FULL_NAME = "HENRY L.";
+const FULL_NAME = "Викович Назарій";
 
 document.addEventListener("DOMContentLoaded", () => {
     insertFullName();
@@ -28,9 +27,12 @@ function initSectionToggles() {
             const body = document.getElementById(targetId);
             if (!body) return;
 
+            // перемикаємо видимість контенту
             body.classList.toggle("is-hidden");
+            // крутимо стрілку
             btn.classList.toggle("toggle-arrow--rotated");
-
+            // оновлюємо aria-expanded
+            //aria-expanded="true|false" - блок розгорнуто/згорнуто
             const expanded = btn.getAttribute("aria-expanded") === "true";
             btn.setAttribute("aria-expanded", String(!expanded));
         });
@@ -81,7 +83,7 @@ function renderExperience() {
     const container = document.getElementById("experienceContainer");
     if (!container) return;
 
-    container.innerHTML = ""; // очищення контейнера
+    container.innerHTML = "";
 
     experienceData.forEach((item) => {
         const article = document.createElement("article");

@@ -1,0 +1,38 @@
+{
+  "personal": {
+    "firstName": "Henry L.",
+    "lastName": "Williams",
+    "title": "Senior Web & Graphic Designer",
+    "city": "Chicago"
+  },
+  "jobs": [
+    {
+      "period": "2021–Present",
+      "company": "Creative Agency",
+      "location": "Chicago",
+      "position": "Senior Web Designer",
+      "description": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    },
+    {
+      "period": "2018–2021",
+      "company": "Creative Market",
+      "location": "United Kingdom",
+      "position": "Graphic Designer",
+      "description": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    },
+    {
+      "period": "2016–2018",
+      "company": "Marketing Agency",
+      "location": "United Kingdom",
+      "position": "Marketing Manager",
+      "description": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    },
+    {
+      "period": "2013–2016",
+      "company": "Creative Agency",
+      "location": "Chicago",
+      "position": "Junior Web Designer",
+      "description": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    }
+  ]
+}

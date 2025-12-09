@@ -73,7 +73,7 @@ function scripts() {
 }
 
 function images() {
-    return src(paths.img.src)
+    return src(paths.img.src, {encoding: false})
         .pipe(imagemin())
         .pipe(dest(paths.img.dest));
 }

@@ -4,11 +4,13 @@
 
     <!-- Ліворуч -->
     <div class="card-dark col-lg-8">
-        <div class="row g-4" style = "margin-left: 6px">
+        <div class="row g-4" style="margin-left: 6px">
             <div class="col-md-6">
                 <section>
                     <div class="card-dark__head">
-                        <h3 class="card-dark__title card-title_notenoughsize" style="padding-right: 160px;"> <i class="fa-solid fa-circle icons"  role="img"></i> SKILLS</h3>
+                        <h3 class="card-dark__title card-title_notenoughsize" style="padding-right: 160px;">
+                            <i class="fa-solid fa-circle icons" role="img"></i> SKILLS
+                        </h3>
                         <button
                                 class="toggle-arrow"
                                 type="button"
@@ -20,29 +22,28 @@
                         </button>
                     </div>
                     <div class="js-collapsible-body" id="skillsBody">
-                    <ul class="meter-list">
-                        <li class="meter-item">
-                            <span class="meter-item__label">Adobe Photoshop</span>
-                            <!-- <span class="meter" style="--val: 78%;"></span> -->
-                            <input type="range" style="--val: 78%;" value="78" >
-                        </li>
-                        <li class="meter-item">
-                            <span class="meter-item__label">Adobe Illustrator</span>
-                            <input type="range" style="--val: 60%;" value="60" >
-                        </li>
-                        <li class="meter-item">
-                            <span class="meter-item__label">Microsoft Word</span>
-                            <input type="range" style="--val: 60%;" value="60" >
-                        </li>
-                        <li class="meter-item">
-                            <span class="meter-item__label">PowerPoint</span>
-                            <input type="range" style="--val: 72%;" value="72" >
-                        </li>
-                        <li class="meter-item">
-                            <span class="meter-item__label">HTML5/CSS3</span>
-                            <input type="range" style="--val: 85%;" value="85" >
-                        </li>
-                    </ul>
+                        <ul class="meter-list">
+                            <li class="meter-item">
+                                <span class="meter-item__label">Adobe Photoshop</span>
+                                <input type="range" style="--val: 78%;" value="78">
+                            </li>
+                            <li class="meter-item">
+                                <span class="meter-item__label">Adobe Illustrator</span>
+                                <input type="range" style="--val: 60%;" value="60">
+                            </li>
+                            <li class="meter-item">
+                                <span class="meter-item__label">Microsoft Word</span>
+                                <input type="range" style="--val: 60%;" value="60">
+                            </li>
+                            <li class="meter-item">
+                                <span class="meter-item__label">PowerPoint</span>
+                                <input type="range" style="--val: 72%;" value="72">
+                            </li>
+                            <li class="meter-item">
+                                <span class="meter-item__label">HTML5/CSS3</span>
+                                <input type="range" style="--val: 85%;" value="85">
+                            </li>
+                        </ul>
                     </div>
                 </section>
             </div>
@@ -50,30 +51,46 @@
             <div class="col-md-6">
                 <section>
                     <div class="card-dark__head">
-                        <h3 class="card-dark__title card-title_notenoughsize"><div class = "flexicons"><i class="fa-solid fa-flag-checkered icons"  role="img"></i> <span> HOBBIES</span></div></h3>
+                        <h3 class="card-dark__title card-title_notenoughsize">
+                            <div class="flexicons">
+                                <i class="fa-solid fa-flag-checkered icons" role="img"></i>
+                                <span> HOBBIES</span>
+                            </div>
+                        </h3>
+                        <button
+                                class="toggle-arrow"
+                                type="button"
+                                data-toggle="section"
+                                data-target="hobbiesBody"
+                                aria-expanded="true"
+                        >
+                            ▾
+                        </button>
                     </div>
-                    <ul class="meter-list">
-                        <li class="meter-item">
-                            <span class="meter-item__label">Book Reading</span>
-                            <input type="range" style="--val: 92%;" value="92" >
-                        </li>
-                        <li class="meter-item">
-                            <span class="meter-item__label">Travelling</span>
-                            <input type="range" style="--val: 82%;" value="82" >
-                        </li>
-                        <li class="meter-item">
-                            <span class="meter-item__label">Playing Chess</span>
-                            <input type="range" style="--val: 63%;" value="63" >
-                        </li>
-                        <li class="meter-item">
-                            <span class="meter-item__label">Graphic Design</span>
-                            <input type="range" style="--val: 88%;" value="88" >
-                        </li>
-                        <li class="meter-item">
-                            <span class="meter-item__label">Painting</span>
-                            <input type="range" style="--val: 55%;" value="55" >
-                        </li>
-                    </ul>
+                    <div class="js-collapsible-body" id="hobbiesBody">
+                        <ul class="meter-list">
+                            <li class="meter-item">
+                                <span class="meter-item__label">Book Reading</span>
+                                <input type="range" style="--val: 92%;" value="92">
+                            </li>
+                            <li class="meter-item">
+                                <span class="meter-item__label">Travelling</span>
+                                <input type="range" style="--val: 82%;" value="82">
+                            </li>
+                            <li class="meter-item">
+                                <span class="meter-item__label">Playing Chess</span>
+                                <input type="range" style="--val: 63%;" value="63">
+                            </li>
+                            <li class="meter-item">
+                                <span class="meter-item__label">Graphic Design</span>
+                                <input type="range" style="--val: 88%;" value="88">
+                            </li>
+                            <li class="meter-item">
+                                <span class="meter-item__label">Painting</span>
+                                <input type="range" style="--val: 55%;" value="55">
+                            </li>
+                        </ul>
+                    </div>
                 </section>
             </div>
         </div>
@@ -82,29 +99,44 @@
     <!-- Праворуч: LANGUAGES (окрема темна картка замість синьої) -->
     <div class="col-lg-4" style="padding-left: 0;">
         <section class="card-blue" style="height:100%">
-            <h2 class="card-dark__title card-title"><i class="fa-solid fa-earth-americas iconsdark" role= "img"></i>LANGUAGES</h2>
-            <ul class="lang-list">
-                <li>
-                    <span>English</span>
-                    <input  type="range" class="slider-special" style="--val: 88%;" value="88" >
-                </li>
-                <li>
-                    <span>French</span>
-                    <input   type="range" class="slider-special" style="--val: 62%;" value="62" >
-                </li>
-                <li>
-                    <span>Spanish</span>
-                    <input type="range" class="slider-special" style="--val: 74%;" value="74" >
-                </li>
-                <li>
-                    <span>German</span>
-                    <input type="range" class="slider-special" style="--val: 58%;" value="58" >
-                </li>
-                <li>
-                    <span>Arabic</span>
-                    <input type="range" class="slider-special" style="--val: 40%;" value="40" >
-                </li>
-            </ul>
+            <div class="card-dark__head">
+                <h2 class="card-dark__title card-title">
+                    <i class="fa-solid fa-earth-americas iconsdark" role="img"></i>LANGUAGES
+                </h2>
+                <button
+                        class="toggle-arrow"
+                        type="button"
+                        data-toggle="section"
+                        data-target="languagesBody"
+                        aria-expanded="true"
+                >
+                    ▾
+                </button>
+            </div>
+            <div class="js-collapsible-body" id="languagesBody">
+                <ul class="lang-list">
+                    <li>
+                        <span>English</span>
+                        <input type="range" class="slider-special" style="--val: 88%;" value="88">
+                    </li>
+                    <li>
+                        <span>French</span>
+                        <input type="range" class="slider-special" style="--val: 62%;" value="62">
+                    </li>
+                    <li>
+                        <span>Spanish</span>
+                        <input type="range" class="slider-special" style="--val: 74%;" value="74">
+                    </li>
+                    <li>
+                        <span>German</span>
+                        <input type="range" class="slider-special" style="--val: 58%;" value="58">
+                    </li>
+                    <li>
+                        <span>Arabic</span>
+                        <input type="range" class="slider-special" style="--val: 40%;" value="40">
+                    </li>
+                </ul>
+            </div>
         </section>
     </div>
 </div>
