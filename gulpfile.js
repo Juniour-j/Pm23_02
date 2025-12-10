@@ -12,7 +12,6 @@ const fileinclude = require("gulp-file-include"); // ← ✅ додали
 
 const paths = {
     html: {
-        // беремо всі html і ВИКЛЮЧАЄМО частинки (partials) та файли, що починаються з "_"
         src: ["app/**/*.html", "!app/**/_*.html", "!app/**/partials/**"],
         dest: "dist/"
     },
@@ -23,9 +22,18 @@ const paths = {
         css: "node_modules/bootstrap/dist/css/bootstrap.min.css",
         js:  "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
     },
-    // окремий патерн для перегляду змін уpartials/_*.html
-    htmlWatch: ["app/**/*.html", "app/**/_*.html", "app/**/partials/**/*.html"]
+    htmlWatch: ["app/**/*.html", "app/**/_*.html", "app/**/partials/**/*.html"],
+
+    // ↓ ДОДАЛИ ДЛЯ JSON
+    json: { src: "app/*.json", dest: "dist/" }
 };
+
+function json() {
+    return src(paths.json.src)
+        .pipe(dest(paths.json.dest))
+        .pipe(browserSync.stream());
+}
+
 
 // ---------- таски копіювання Bootstrap ----------
 function bootstrapCss() {
@@ -83,14 +91,18 @@ function reload(done) { browserSync.reload(); done(); }
 function serve() {
     browserSync.init({ server: { baseDir: "dist" }, open: false, notify: false });
 
-    watch(paths.htmlWatch, html);     // ← ✅ відслідковуємо і partials
+    watch(paths.htmlWatch, html);
     watch("app/scss/**/*.scss", styles);
     watch(paths.js.src, scripts);
     watch(paths.img.src, series(images, reload));
+
+    // ↓ ДОДАЛИ
+    watch(paths.json.src, json);
 }
 
+
 const build = series(
-    parallel(bootstrapCss, bootstrapJs, html, styles, scripts, images)
+    parallel(bootstrapCss, bootstrapJs, html, styles, scripts, images, json)
 );
 
 exports.bootstrapCss = bootstrapCss;
@@ -99,5 +111,6 @@ exports.html = html;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.images = images;
+exports.json = json;
 exports.build = build;
 exports.default = series(build, serve);
