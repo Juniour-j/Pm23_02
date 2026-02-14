@@ -102,10 +102,7 @@ function renderExperience(jobs) {
     });
 }
 
-/**
- * Службове повідомлення при помилці завантаження
- * — або пишемо в #dataError, або fallback на alert
- */
+
 function showDataError(message) {
     const box = document.getElementById("dataError");
     if (box) {
@@ -136,3 +133,4 @@ function initSectionToggles() {
         });
     });
 }
+console.log("test")

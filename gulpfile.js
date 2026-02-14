@@ -24,7 +24,6 @@ const paths = {
     },
     htmlWatch: ["app/**/*.html", "app/**/_*.html", "app/**/partials/**/*.html"],
 
-    // ↓ ДОДАЛИ ДЛЯ JSON
     json: { src: "app/*.json", dest: "dist/" }
 };
 
@@ -35,7 +34,7 @@ function json() {
 }
 
 
-// ---------- таски копіювання Bootstrap ----------
+
 function bootstrapCss() {
     return src(paths.bs.css)
         .pipe(dest(paths.scss.dest))
@@ -56,7 +55,6 @@ function html() {
             basepath: '@file',     // шукати partials відносно файл
             indent: true, // зберігати відступи(
         }))
-        // сплощуємо структуру у dist/ (за потреби можна прибрати)
         .pipe(rename(p => { p.dirname = ""; }))
         .pipe(dest(paths.html.dest))
         .pipe(browserSync.stream());
@@ -96,7 +94,6 @@ function serve() {
     watch(paths.js.src, scripts);
     watch(paths.img.src, series(images, reload));
 
-    // ↓ ДОДАЛИ
     watch(paths.json.src, json);
 }
 
